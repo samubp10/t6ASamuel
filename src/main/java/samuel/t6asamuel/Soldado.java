@@ -59,30 +59,5 @@ public class Soldado extends Trabajador {
         this.PlusSoldado = sueldoSoldado;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 47 * hash + Objects.hashCode(this.arma);
-        hash = 47 * hash + this.PlusSoldado;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (!super.equals(obj)){
-            return false;
-        }
-    
-        final Soldado other = (Soldado) obj;
-        
-        if (this.arma != other.arma) {
-            return false;
-        }
-        
-        if (this.PlusSoldado != other.PlusSoldado) {
-            return false;
-        }
-        return true;
-    }
-
+   
 }
