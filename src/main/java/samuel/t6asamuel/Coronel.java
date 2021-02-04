@@ -55,3 +55,36 @@ public class Coronel extends Soldado {
     public void setAniosAntiguedad(int aniosAntiguedad) {
         this.aniosAntiguedad = aniosAntiguedad;
     }
+    
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 37 * hash + this.PlusCoronel;
+        hash = 37 * hash + this.aniosAntiguedad;
+        return hash;
+    }
+
+    @Override
+    public void MostrarSueldo() {
+        System.out.println(PlusCoronel);
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+       if (!super.equals(obj)){
+            return false;
+        }
+    
+        final Coronel other = (Coronel) obj;
+        
+        if (this.PlusCoronel != other.PlusCoronel) {
+            return false;
+        }
+        if (this.aniosAntiguedad != other.aniosAntiguedad) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+}
