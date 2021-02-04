@@ -9,22 +9,43 @@ package samuel.t6asamuel;
  *
  * @author Samuel
  */
-public class Coronel extends Soldado{
-    private int aumentoSueldoRango;
+public class Coronel extends Soldado {
+
+    private int PlusCoronel;
     private int aniosAntiguedad;
-    
-    public Coronel(int aumentoSueldoRango, int aniosAntiguedad, String arma, int sueldo) {
-        super(arma, sueldo);
-        this.aumentoSueldoRango = aumentoSueldoRango;
+
+    public Coronel(int PlusCoronel, int aniosAntiguedad, String arma, int PlusSoldado, int sueldo) {
+        super(arma, PlusSoldado, sueldo);
+        this.PlusCoronel = PlusCoronel;
         this.aniosAntiguedad = aniosAntiguedad;
     }
 
-    public int getAumentoSueldoRango() {
-        return aumentoSueldoRango;
+    public int getPlusCoronel() {
+        return PlusCoronel;
     }
 
-    public void setAumentoSueldoRango(int aumentoSueldoRango) {
-        this.aumentoSueldoRango = aumentoSueldoRango;
+    public void setPlusCoronel(int PlusCoronel) {
+        this.PlusCoronel = PlusCoronel;
+    }
+
+  
+
+    public void anadirAnioAntiguedad(int aniosMas) {
+        aniosAntiguedad =+ aniosMas;
+    }
+
+    
+
+    @Override
+    public String toString() {
+        return "Coronel{" + "PlusCoronel=" + PlusCoronel + ", aniosAntiguedad=" + aniosAntiguedad + '}';
+    }
+
+    @Override
+
+    public void aumentarSueldo(int aumenta) {
+
+        PlusCoronel += aumenta;
     }
 
     public int getAniosAntiguedad() {
@@ -36,7 +57,34 @@ public class Coronel extends Soldado{
     }
 
     @Override
-    public String toString() {
-        return super.toString()+" SoldadoRaso{" + "aumentoSueldoRango=" + aumentoSueldoRango + ", aniosAntiguedad=" + aniosAntiguedad + '}';
+    public int hashCode() {
+        int hash = 3;
+        hash = 37 * hash + this.PlusCoronel;
+        hash = 37 * hash + this.aniosAntiguedad;
+        return hash;
     }
+
+    @Override
+    public void MostrarSueldo() {
+        System.out.println(PlusCoronel);
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+       if (!super.equals(obj)){
+            return false;
+        }
+    
+        final Coronel other = (Coronel) obj;
+        
+        if (this.PlusCoronel != other.PlusCoronel) {
+            return false;
+        }
+        if (this.aniosAntiguedad != other.aniosAntiguedad) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 }

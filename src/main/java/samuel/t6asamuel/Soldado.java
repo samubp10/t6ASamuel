@@ -5,35 +5,12 @@
  */
 package samuel.t6asamuel;
 
+import java.util.Objects;
+
 /**
  *
  * @author Samuel
  */
 public class Soldado extends Trabajador {
 
-    private String arma;
-
-    public String getArma() {
-        return arma;
-    }
-
-    public void setArma(String arma) {
-        this.arma = arma;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString()+" \nSoldado{" + "arma=" + arma + '}';
-    }
-
-    public Soldado(String arma, int sueldo) {
-        super(sueldo);
-        this.arma = arma;
-    }
     
-    @Override
-    public void aumentarSueldo(int aumenta){
-        
-         super.getSueldo() += aumenta;
-    }
-}

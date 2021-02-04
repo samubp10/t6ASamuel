@@ -11,21 +11,32 @@ package samuel.t6asamuel;
  */
 public class SoldadoRaso extends Soldado {
 
-    private int aumentoSueldoRango;
+    private int PlusRaso;
     private int aniosAntiguedad;
 
-    public SoldadoRaso(int aumentoSueldoRango, int aniosAntiguedad, String arma, int sueldo) {
-        super(arma, sueldo);
-        this.aumentoSueldoRango = aumentoSueldoRango;
+    public int getPlusRaso() {
+        return PlusRaso;
+    }
+
+    public void setPlusRaso(int PlusRaso) {
+        this.PlusRaso = PlusRaso;
+    }
+
+    public SoldadoRaso(int PlusRaso, int aniosAntiguedad, String arma, int PlusSoldado, int sueldo) {
+        super(arma, PlusSoldado, sueldo);
+        this.PlusRaso = PlusRaso;
         this.aniosAntiguedad = aniosAntiguedad;
     }
 
-    public int getAumentoSueldoRango() {
-        return aumentoSueldoRango;
+    public void reducirSueldo(int reducir) {
+
+        aniosAntiguedad += reducir;
     }
 
-    public void setAumentoSueldoRango(int aumentoSueldoRango) {
-        this.aumentoSueldoRango = aumentoSueldoRango;
+    @Override
+    public void aumentarSueldo(int aumenta) {
+
+        PlusRaso += aumenta;
     }
 
     public int getAniosAntiguedad() {
@@ -38,8 +49,37 @@ public class SoldadoRaso extends Soldado {
 
     @Override
     public String toString() {
-        return super.toString()+" SoldadoRaso{" + "aumentoSueldoRango=" + aumentoSueldoRango + ", aniosAntiguedad=" + aniosAntiguedad + '}';
+        return "SoldadoRaso{" + "PlusRaso=" + PlusRaso + ", aniosAntiguedad=" + aniosAntiguedad + '}';
     }
-     
+
+    @Override
+    public void MostrarSueldo() {
+        System.out.println(PlusRaso);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + this.PlusRaso;
+        hash = 71 * hash + this.aniosAntiguedad;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)){
+            return false;
+        }
     
+        final SoldadoRaso other = (SoldadoRaso) obj;
+        
+        if (this.PlusRaso != other.PlusRaso) {
+            return false;
+        }
+        if (this.aniosAntiguedad != other.aniosAntiguedad) {
+            return false;
+        }
+        return true;
+    }
+
 }
