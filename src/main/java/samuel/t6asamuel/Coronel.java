@@ -19,7 +19,7 @@ public class Coronel extends Soldado {
         this.PlusCoronel = PlusCoronel;
         this.aniosAntiguedad = aniosAntiguedad;
     }
-
+//Getters y setter
     public int getPlusCoronel() {
         return PlusCoronel;
     }
@@ -29,25 +29,25 @@ public class Coronel extends Soldado {
     }
 
   
-
+//Método exclusivo de coronel
     public void anadirAnioAntiguedad(int aniosMas) {
         aniosAntiguedad =+ aniosMas;
     }
 
     
-
+//Polimorfismo
     @Override
     public String toString() {
         return "Coronel{" + "PlusCoronel=" + PlusCoronel + ", aniosAntiguedad=" + aniosAntiguedad + '}';
     }
-
+//Polimorfismo
     @Override
 
     public void aumentarSueldo(int aumenta) {
 
         PlusCoronel += aumenta;
     }
-
+//Getters y setter
     public int getAniosAntiguedad() {
         return aniosAntiguedad;
     }
@@ -55,7 +55,7 @@ public class Coronel extends Soldado {
     public void setAniosAntiguedad(int aniosAntiguedad) {
         this.aniosAntiguedad = aniosAntiguedad;
     }
-    
+    //Polimorfismo
     @Override
     public int hashCode() {
         int hash = 3;
@@ -63,12 +63,12 @@ public class Coronel extends Soldado {
         hash = 37 * hash + this.aniosAntiguedad;
         return hash;
     }
-
+//Polimorfismo
     @Override
     public void MostrarSueldo() {
         System.out.println(PlusCoronel);
     }
-    
+    //Polimorfismo
     @Override
     public boolean equals(Object obj) {
        if (!super.equals(obj)){

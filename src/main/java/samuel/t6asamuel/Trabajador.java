@@ -28,19 +28,19 @@ public class Trabajador {
     public void setSueldo(int sueldo) {
         this.sueldoBase = sueldo;
     }
-
+//Polimorfismos
     @Override
     public String toString() {
         return "Trabajador{" + "sueldoBase=" + sueldoBase + '}';
     }
-
+//Polimorfismos
     @Override
     public int hashCode() {
         int hash = 3;
         hash = 37 * hash + this.sueldoBase;
         return hash;
     }
-
+//Polimorfismos
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {

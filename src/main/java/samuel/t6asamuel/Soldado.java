@@ -15,34 +15,34 @@ public class Soldado extends Trabajador {
 
     private String arma;
     private int PlusSoldado;
-
+    //Polimorfismo
     @Override
     public String toString() {
         return super.toString() + " \nSoldado{" + "arma=" + arma + '}';
     }
 
-    
+    //Método para mostrar el plus del soldado
     public void MostrarSueldo() {
         System.out.println(PlusSoldado);
     }
-
+    //Constructor
     public Soldado(String arma, int PlusSoldado, int sueldo) {
         super(sueldo);
         this.arma = arma;
         this.PlusSoldado = PlusSoldado;
     }
-
+    //Método que cambia el contenido del atributo arma
     public void cambiarPistola() {
         arma = "Glock";
         System.out.println("Su pistola ha cambiado, ahora es una glock");
     }
-
+    //Polimorfismos
     @Override
     public void aumentarSueldo(int aumenta) {
 
         PlusSoldado += aumenta;
     }
-
+    //getters y setters
     public String getArma() {
         return arma;
     }
@@ -58,7 +58,7 @@ public class Soldado extends Trabajador {
     public void setPlusSoldado(int sueldoSoldado) {
         this.PlusSoldado = sueldoSoldado;
     }
-
+//Polimorfismos
     @Override
     public int hashCode() {
         int hash = 7;
@@ -66,7 +66,7 @@ public class Soldado extends Trabajador {
         hash = 47 * hash + this.PlusSoldado;
         return hash;
     }
-
+//Polimorfismo
     @Override
     public boolean equals(Object obj) {
         if (!super.equals(obj)){
