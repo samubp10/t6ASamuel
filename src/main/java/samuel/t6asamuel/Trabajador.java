@@ -35,6 +35,13 @@ public class Trabajador {
     }
 
     @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 37 * hash + this.sueldoBase;
+        return hash;
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -51,5 +58,7 @@ public class Trabajador {
         }
         return true;
     }
+
+   
     
 }
