@@ -51,4 +51,35 @@ public class SoldadoRaso extends Soldado {
     public String toString() {
         return "SoldadoRaso{" + "PlusRaso=" + PlusRaso + ", aniosAntiguedad=" + aniosAntiguedad + '}';
     }
+
+    @Override
+    public void MostrarSueldo() {
+        System.out.println(PlusRaso);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + this.PlusRaso;
+        hash = 71 * hash + this.aniosAntiguedad;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+
+        final SoldadoRaso other = (SoldadoRaso) obj;
+
+        if (this.PlusRaso != other.PlusRaso) {
+            return false;
+        }
+        if (this.aniosAntiguedad != other.aniosAntiguedad) {
+            return false;
+        }
+        return true;
+    }
+
 }
