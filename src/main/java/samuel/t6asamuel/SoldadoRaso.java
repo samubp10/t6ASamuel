@@ -49,7 +49,7 @@ public class SoldadoRaso extends Soldado {
 //Polimorfismo
     @Override
     public String toString() {
-        return "SoldadoRaso{" + "PlusRaso=" + PlusRaso + ", aniosAntiguedad=" + aniosAntiguedad + '}';
+        return super.toString()+"SoldadoRaso{" + "PlusRaso=" + PlusRaso + ", aniosAntiguedad=" + aniosAntiguedad + '}';
     }
 //Polimorfismo
     @Override

@@ -15,7 +15,7 @@ public class Trabajador {
     public Trabajador(int sueldo) {
         this.sueldoBase = sueldo;
     }
-    
+    //Método A
     public void aumentarSueldo(int aumenta){
         
          sueldoBase += aumenta;

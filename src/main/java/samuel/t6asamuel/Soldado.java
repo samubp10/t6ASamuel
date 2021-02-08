@@ -22,6 +22,7 @@ public class Soldado extends Trabajador {
     }
 
     //Método para mostrar el plus del soldado
+    
     public void MostrarSueldo() {
         System.out.println(PlusSoldado);
     }
@@ -32,6 +33,7 @@ public class Soldado extends Trabajador {
         this.PlusSoldado = PlusSoldado;
     }
     //Método que cambia el contenido del atributo arma
+    //Método B
     public void cambiarPistola() {
         arma = "Glock";
         System.out.println("Su pistola ha cambiado, ahora es una glock");

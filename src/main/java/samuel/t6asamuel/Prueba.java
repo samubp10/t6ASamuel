@@ -57,8 +57,9 @@ public class Prueba {
                 ((Coronel) t).anadirAnioAntiguedad(5);
             }
         }
-        Trabajadores.indexOf(raso2);
-        Trabajadores.contains(raso1);
+        System.out.println(Trabajadores.indexOf(raso2));
+        
+        System.out.println(Trabajadores.contains(raso1));
         Trabajadores.remove(Coronel1);
         
         
